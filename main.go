@@ -86,7 +86,7 @@ func main() {
 		panic(err)
 	}
 
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/home/say", handler)
 	err = http.ListenAndServe(fmt.Sprintf(":%d", *listenPort), newLogHandler(http.DefaultServeMux))
 	if err != nil {
 		panic(err)
